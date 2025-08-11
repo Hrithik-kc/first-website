@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            align-content: center;
+        }
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin-top: 20px;
+            width: 50%;
+            
+            
+          
+        }
+        th,td{
+            border:2px solid black;
+            padding: 8px;
+            text-align: left;
+            grid-area: span;
+            
+        }
+        th{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fetching api data</h1>
+    <!-- <ol id="fetchlist"></ol> -->
+    <table>
+        <thead>
+            
+            <tr>
+                
+                <th id="item">S.no</th> 
+                <th class="us">User name</th>
+                <th id="name">name</th>
+                <th id="email">email</th>
+                
+            </tr>
+        </thead>
+    </table>
+    <ol>
+          <div id="hh"></div>
+                </ol>
+    <script>
+        const list=document.getElementById("hh");
+        console.log(list);
+        const fetchdata1 = async () => {
+                const resp = await fetch("https://jsonplaceholder.typicode.com/users");
+                if (resp.ok==true) {
+                    const data=await resp.json();
+                    console.log(data);
+                    data.forEach((el) => {
+                        console.log(el.name);
+                       
+                        
+                        let li = document.createElement("li");
+                        console.log(li);
+                        li.textContent=el.name;
+                        list.appendChild(li)
+                    });
+                }
+          
+        };
+        fetchdata1();
+        const list1=document.getElementById("us");
+        console.log(list1);
+        const fetchdata = async () => {
+                const resp = await fetch("https://jsonplaceholder.typicode.com/users");
+                if (resp.ok==true) {
+                    const data=await resp.json();
+                    console.log(data);
+                    data.forEach((el) => {
+                        console.log(el.username);
+                       
+                        
+                        let li = document.createElement("li");
+                        console.log(li);
+                        li.textContent=el.username;
+                        list.appendChild(li)
+                    });
+                }
+          
+        };
+        fetchdata();
+     </script>
+</body>
+
+</html>

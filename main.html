@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <style>
+        body{
+            text-align: center;
+        }
+        .container{
+            border: dashed brown;
+            background-color: yellow;
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+        }
+        button{
+            border: 1px solid black;
+            color: aliceblue;
+             padding: 10px 15px;
+            border-radius: 5px;
+        }
+        #box1{
+           
+            background-color: red;        
+        }
+        #box2{
+          
+            background-color: rgb(6, 163, 40);
+        }
+        #box3{
+            
+            background-color: rgb(19, 91, 199);
+        }
+        #box1:hover{
+            color: blue;
+        }
+        #box2:hover{
+            color: blue;
+        }#box3:hover{
+            color: blue;
+        }
+        p{
+            font-size: xx-large;
+            font-weight: bold;
+        }
+        @media(max-width:576px) {
+            h1{
+                color: brown;
+                font-size: 100px;
+                background-color: chartreuse;
+            }
+            #box1{
+                background-color: rgb(54, 199, 204);
+            }
+        }
+        @media(min-width:576px) and (max-width:768px){
+            h1{
+                color: rgb(127, 18, 199);
+                font-size: 100px;
+                background-color: chartreuse;
+            }
+            #box1{
+                background-color: rgb(147, 204, 14);
+            }
+        }
+         @media(min-width:769px) and (max-width:992px){
+            h1{
+                color: rgb(47, 212, 31);
+                font-size: 100px;
+                background-color: rgb(17, 102, 151);
+            }
+            #box1{
+                background-color: rgb(13, 190, 72);
+            }
+        }
+        @media(min-width:993px) {
+            h1{
+                color: rgb(218, 47, 166);
+                font-size: 100px;
+                background-color: chartreuse;
+            }
+            #box1{
+                background-color: rgb(211, 191, 10);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Counter Application</h1>
+    <div class="container">
+        <p class="val">0</p>
+        <div >
+        <button id="box1">Increment</button>
+        <button id="box2">Decrement</button>
+        <button id="box3">Reset</button>
+    </div>
+   
+    </div>
+    
+</body>
+</html>
