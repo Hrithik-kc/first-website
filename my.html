@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="firstbox">
+        <h1>Welcome to <span style="color: red;">My Website</span></h1>
+        <h4>Advanced HTML,CSS & JS Example</h4>
+    </div>
+
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nostrum iure explicabo, eveniet velit sapiente
+        ab eaque aliquam vel quaerat quo tenetur itaque quia qui? Fuga quae non cupiditate error?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sapiente vero architecto nam libero ullam corporis,
+        eaque ipsa it n.
+        <div class="box1">
+            <img src="ihi" alt="Dummy image">
+        </div>
+    </div>
+    <div class="second">
+        Student Data Table
+        <table>
+            <thead>
+                <tr>
+                    <th id="sno">S.no</th>
+                    <th id="usn">Username</th>
+                    <th id="name">Name</th>
+                    <th id="email">Email</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="one">
+        <h2>Top Skills</h2>
+        <ul>
+            <li> HTML</li>
+            <ul>
+                <li>Tags</li>
+                <li>Attribute</li>
+                <li>Forms</li>
+            </ul>
+        </ul>
+        <ul>
+            <li> CSS</li>
+            <ul>
+                <li>Selectors</li>
+                <li>Box Model</li>
+                <li>Positioning</li>
+            </ul>
+        </ul>
+        <ul>
+            <li> JavaScript</li>
+            <ul>
+                <li>DOM</li>
+                <li>Events</li>
+                <li>Functions</li>
+            </ul>
+            <li id="data"></li>
+            <li id="data"></li>
+        </ul>
+        <input type="Enter new skill" id="in" placeholder="Add new skill" />
+        <button type="submit">Add Skill</button>
+        <script>
+            const input = document.getElementById("in");
+            const btn = document.getElementsByTagName("button");
+            const para = document.getElementById("data");
+            btn[0].addEventListener("click", () => {
+                console.log(input.value);
+                para.textContent = input.value;
+            })
+        </script>
+
+    </div>
+    <div class="hh">
+        <h3>Contact Forms</h3>
+        <h5>Name</h5>
+        <div><input id="in" placeholder="Enter the name" /></div>
+        <h5>Email</h5>
+        <div><input id="in" placeholder="Enter the email" /></div>
+        <div style="padding-top: 30px;"><button type="submit">submit</button></div>
+    </div>
+    <div class="hi">
+        <h3>Fun zone</h3>
+         <div style="padding-top: 30px;padding-left: 10px;"><button onclick="color()" type="submit">Change Background Color</button>
+        <script>
+            function color(){
+                document.body.style.backgroundColor='rgb(200,64,98)';
+            }
+        </script>
+    </div>
+
+    </div>
+   
+</body>
+
+</html>
